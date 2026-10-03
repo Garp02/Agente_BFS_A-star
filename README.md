@@ -22,11 +22,7 @@ Se basa en un tablero donde un caballero parte de su
 estado inicial $s_0$; debe recoger una espada y cruzar 
 por el puente para desvivir al dragón.
 
-<div align="center">
-  <img src="caballero_dragon.png" alt="Tablero" width="300" height="300">
-  <br>
-  <em>Tablero del caballero y el dragón</em>
-</div>
+   <img width="794" height="800" alt="Image" src="https://github.com/user-attachments/assets/ae28d309-8cd4-425d-88f2-d252543cb50a" />
 
 El problema se modela como un sistema de transición de estados 
 $\Sigma = (S, A, E, \gamma)$:
