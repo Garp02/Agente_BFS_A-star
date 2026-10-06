@@ -137,12 +137,12 @@ principal desventaja es el consumo de memoria, ya que debe almacenar
 todos los nodos de cada nivel antes de avanzar al siguiente.
 
 ### A*
-$A^*$ es un algoritmo de búsqueda informada que combina las ventajas de BFS 
+$A^{*}$ es un algoritmo de búsqueda informada que combina las ventajas de BFS 
 (garantía de encontrar una solución) con el uso de una heurística que 
 guía la exploración hacia el estado objetivo, en lugar de expandir los 
 estados de manera "ciega" nivel por nivel.
 
-En vez de una cola simple, $A^*$ utiliza una cola de prioridad, donde cada 
+En vez de una cola simple, $A^{*}$ utiliza una cola de prioridad, donde cada 
 estado n se ordena según una función de evaluación:
 
 $$f(n) = g(n) + h(n)$$
@@ -151,7 +151,7 @@ $$f(n) = g(n) + h(n)$$
 - $h(n)$: estimación heurística del costo restante desde $n$ hasta el estado objetivo.
 - $f(n)$: costo estimado total del camino que pasa por $n$.
 
-En cada iteración, $A^*$ expande el estado con el menor valor de $f(n)$ de 
+En cada iteración, $A^{*}$ expande el estado con el menor valor de $f(n)$ de 
 la cola de prioridad, genera sus sucesores accesibles, calcula su g y h 
 correspondientes, y los agrega a la cola. El proceso termina cuando el 
 estado extraído es el estado objetivo.
