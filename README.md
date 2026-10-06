@@ -137,12 +137,12 @@ principal desventaja es el consumo de memoria, ya que debe almacenar
 todos los nodos de cada nivel antes de avanzar al siguiente.
 
 ### A*
-$A^{*}$ es un algoritmo de búsqueda informada que combina las ventajas de BFS 
+$A^\ast$ es un algoritmo de búsqueda informada que combina las ventajas de BFS 
 (garantía de encontrar una solución) con el uso de una heurística que 
 guía la exploración hacia el estado objetivo, en lugar de expandir los 
 estados de manera "ciega" nivel por nivel.
 
-En vez de una cola simple, $A^{*}$ utiliza una cola de prioridad, donde cada 
+En vez de una cola simple, $A^\ast$ utiliza una cola de prioridad, donde cada 
 estado n se ordena según una función de evaluación:
 
 $$f(n) = g(n) + h(n)$$
@@ -151,16 +151,16 @@ $$f(n) = g(n) + h(n)$$
 - $h(n)$: estimación heurística del costo restante desde $n$ hasta el estado objetivo.
 - $f(n)$: costo estimado total del camino que pasa por $n$.
 
-En cada iteración, $A^{*}$ expande el estado con el menor valor de $f(n)$ de 
+En cada iteración, $A^\ast$ expande el estado con el menor valor de $f(n)$ de 
 la cola de prioridad, genera sus sucesores accesibles, calcula su g y h 
 correspondientes, y los agrega a la cola. El proceso termina cuando el 
 estado extraído es el estado objetivo.
 
 Si la heurística $h(n)$ es admisible (nunca sobreestima el costo real 
-restante) y consistente, $A^{*}$ garantiza encontrar el camino óptimo, al 
+restante) y consistente, $A^\ast$ garantiza encontrar el camino óptimo, al 
 igual que BFS, pero explorando en general muchos menos estados, ya que 
 la heurística evita expandir ramas que se alejan del objetivo. Cuando 
-$h(n) = 0$ para todo estado, $A^{*}$ se reduce exactamente a una búsqueda tipo 
+$h(n) = 0$ para todo estado, $A^\ast$ se reduce exactamente a una búsqueda tipo 
 Dijkstra (o BFS si los costos de transición son iguales).
 
 --- 
