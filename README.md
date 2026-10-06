@@ -157,10 +157,10 @@ correspondientes, y los agrega a la cola. El proceso termina cuando el
 estado extraído es el estado objetivo.
 
 Si la heurística $h(n)$ es admisible (nunca sobreestima el costo real 
-restante) y consistente, $A^*$ garantiza encontrar el camino óptimo, al 
+restante) y consistente, $A^{*}$ garantiza encontrar el camino óptimo, al 
 igual que BFS, pero explorando en general muchos menos estados, ya que 
 la heurística evita expandir ramas que se alejan del objetivo. Cuando 
-$h(n) = 0$ para todo estado, $A^*$ se reduce exactamente a una búsqueda tipo 
+$h(n) = 0$ para todo estado, $A^{*}$ se reduce exactamente a una búsqueda tipo 
 Dijkstra (o BFS si los costos de transición son iguales).
 
 --- 
