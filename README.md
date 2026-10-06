@@ -9,7 +9,7 @@
 # Tarea 3
 
 En este repositorio se implementaron los algoritmos 
-Breadth-First Search y $A^*$ al agente: El caballero 
+Breadth-First Search y $A^\ast$ al agente: El caballero 
 y el Dragón.
 
 --- 
@@ -19,8 +19,8 @@ y el Dragón.
 ### Agente base: El caballero y el Dragón
 
 Se basa en un tablero donde un caballero parte de su 
-estado inicial $s_0$; debe recoger una espada y cruzar 
-por el puente para desvivir al dragón.
+estado inicial $s_i$; debe recoger una espada y cruzar 
+por el puente para derrotar al dragón.
 
 <p align="center">
   <img width="400" alt="Image" src="https://github.com/user-attachments/assets/ae28d309-8cd4-425d-88f2-d252543cb50a" />
@@ -46,11 +46,11 @@ der, der, matar.
 ## Agente modificado
 
 En base al agente anteriormente descrito, se tomarán algunas características y se 
-implementarán nuevas, destacanto la implementación de los algoritmos **BFS** y $A^{*}$.
+implementarán nuevas, destacando la implementación de los algoritmos **BFS** y $A^\ast$.
 
 ### Diseño de tablero
 Se cambiará el tamaño del tablero a uno 7x7 para tener más 
-libertad de movimiento. Además, se agregan reestricciones de 
+libertad de movimiento. Además, se agregan restricciones de 
 posición, como un laberinto. Este diseño se quedará fijo por 
 limitaciones de tiempo y porque no sé cómo resultaría hacer 
 que todo esto se hiciera de forma aleatoria. Pero sería muy 
@@ -85,18 +85,23 @@ $\mathbf{X}$ (obstáculo).
 ### Posición inicial
 
 A diferencia del agente base, en esta versión se podrá establecer 
-la posición del estado inicial en donde e usuario indique, siempre 
+la posición del estado inicial en donde el usuario indique, siempre 
 y cuando sea una posición válida.  
 
-Decimos que una posición es válido si: 
+Decimos que una posición es válida si: 
 
-1. $p = (x,y) \backepsilon x,y\in[0,6]$.
-2. No hay otro elemento en esa posición. 
+1. $p = (x, y)$ con $x, y \in [0, 6]$.
+2. No hay otro elemento (obstáculo, espada o dragón) en esa posición. 
 
 #### Sistema de coordenadas
 
 Pasamos de $\{\text{arriba}, \text{abajo}, \text{izq}, \text{der}, \text{tomar}, \text{matar}\}$ 
 a $\{\text{norte}, \text{sur},\text{este}, \text{oeste}, \text{tomar}, \text{matar}\}$.
+
+El origen $(0, 0)$ está en la esquina inferior izquierda del tablero: 
+$x$ crece hacia el este y $y$ crece hacia el norte. Así, $\text{norte}$, 
+$\text{sur}$, $\text{este}$ y $\text{oeste}$ cambian la posición en 
+$(0, +1)$, $(0, -1)$, $(+1, 0)$ y $(-1, 0)$, respectivamente.
 
 --- 
 
@@ -107,11 +112,12 @@ Usaremos un sistema de transición de estados similar al del agente base, $\Sigm
 - **Estado:** $s = (p, e, d)$, donde $p = (x, y)$ es la posición del 
   caballero, $e \in \{0, 1\}$ indica si tiene la espada y $d \in \{0, 1\}$ 
   indica si el dragón sigue vivo.
-- **Acciones:** $A' = \{\text{norte}, \text{sur}\text{este}, \text{oeste}, \text{tomar}, \text{matar}\}$.
+- **Acciones:** $A' = \{\text{norte}, \text{sur}, \text{este}, \text{oeste}, \text{tomar}, \text{matar}\}$.
 - **Función de transición:** $\gamma'(s, a) = s'$ si $a$ es aplicable en $s$, y vacío en 
   caso contrario. `tomar` solo es aplicable 
   sobre la casilla de la espada y `matar` solo sobre la del dragón con la espada en mano.
-- **Estado inicial:** $s_i = ((0, 0), 0, 1)$.
+- **Estado inicial:** $s_i = (p_0, 0, 1)$, donde $p_0$ es la posición inicial 
+  válida que indique el usuario (en el tablero de ejemplo, $p_0 = (0, 6)$).
 - **Meta:** $g(s)$ se cumple cuando $d = 0$.
 
 ---
@@ -175,8 +181,8 @@ Dijkstra (o BFS si los costos de transición son iguales).
 
 - [Wikipedia - Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-- [Wikipedia - A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm)
+- [Wikipedia - A\* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm)
 
-- [GeeksforGeeks - A* Search Algorithm](https://www.geeksforgeeks.org/dsa/a-search-algorithm/)
+- [GeeksforGeeks - A\* Search Algorithm](https://www.geeksforgeeks.org/dsa/a-search-algorithm/)
 
-- [Emojis - (🤺, 🐉, 🗡️, ⬛)](https://emojikeyboard.top/es/) 
+- [Emojis - (🤺, 🐉, 🗡️, ⬛)](https://emojikeyboard.top/es/)
