@@ -169,6 +169,9 @@ la heurística evita expandir ramas que se alejan del objetivo. Cuando
 $h(n) = 0$ para todo estado, $A^\ast$ se reduce exactamente a una búsqueda tipo 
 Dijkstra (o BFS si los costos de transición son iguales).
 
+
+$$\tag*{$\blacksquare$}$$
+
 --- 
 
 ### Referencias
