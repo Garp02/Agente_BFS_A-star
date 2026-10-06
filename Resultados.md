@@ -5,16 +5,16 @@ en la posición inicial $p_0 = (0, 6)$, es decir, $s_i = ((0, 6), 0, 1)$.
 
 --- 
 
-## Leyenda
+## Simbología
 
-| Símbolo | Significado |
+| Caracter | Significado |
 |:---:|:---|
-| `C` | Inicio (caballero) |
+| `C` | Caballero |
 | `D` | Dragón |
 | `E` | Espada |
 | `X` | Obstáculo |
-| `*` | Camino solución |
-| `o` | Casilla descartada (explorada, pero fuera del camino) |
+| `*` | Camino recorrido |
+| `o` | Casilla descartada |
 | ` ` | Sin explorar |
 
 > Nota: los estados $(p, e, d)$ se proyectan a su casilla $p$, por lo que una 
@@ -56,7 +56,7 @@ El estado final cumple $g(s)$, pues $d = 0$.
 
 | Métrica | Valor |
 |:---|:---:|
-| Pasos del algoritmo (nodos explorados) | 70 |
+| Pasos del algoritmo | 70 |
 | Casillas descartadas | 22 |
 | Longitud del plan | 19 |
 
@@ -92,7 +92,7 @@ norte, norte, norte, este, norte, norte, oeste, matar
 
 | Métrica | Valor |
 |:---|:---:|
-| Pasos del algoritmo (nodos explorados) | 37 |
+| Pasos del algoritmo | 37 |
 | Casillas descartadas | 13 |
 | Longitud del plan | 19 |
 
