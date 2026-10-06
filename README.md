@@ -117,7 +117,7 @@ Usaremos un sistema de transición de estados similar al del agente base, $\Sigm
   caso contrario. `tomar` solo es aplicable 
   sobre la casilla de la espada y `matar` solo sobre la del dragón con la espada en mano.
 - **Estado inicial:** $s_i = (p_0, 0, 1)$, donde $p_0$ es la posición inicial 
-  válida que indique el usuario (en el tablero de ejemplo, $p_0 = \(0, 6\)$).
+  válida que indique el usuario en el tablero.
 - **Meta:** $g(s)$ se cumple cuando $d = 0$.
 
 ---
