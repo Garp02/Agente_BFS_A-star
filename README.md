@@ -171,7 +171,7 @@ Dijkstra (o BFS si los costos de transición son iguales).
 
 <div align="right">
 
-$$\tag*{$\blacksquare$}$$
+$\blacksquare$
 
 </div>
 
